@@ -1,9 +1,6 @@
 ﻿// Create a CLI calculator
 
-// Ask user what math operator to use
-// Accepts 2 integers
-// Outputs the result
-
+// Main program asks user for the input and deals with calling the Calculator methods to perform necessary calculations.
 string userOperator = "";
 
 bool isValidOperator = false;
@@ -30,21 +27,45 @@ if (isValidOperator)
     switch (userOperator)
     {
         case "add":
-            result = firstNum + secondNum;
+            result = Calculator.Add(firstNum, secondNum);
             break;
 
         case "subtract":
-            result = firstNum - secondNum;
+            result = Calculator.Subtract(firstNum, secondNum);
             break;
 
         case "divide":
-            result = firstNum / secondNum;
+            result = Calculator.Divide(firstNum, secondNum);
             break;
 
         case "multiply":
-            result = firstNum * secondNum;
+            result = Calculator.Multiply(firstNum, secondNum);
             break;
     }
 
     Console.WriteLine($"The result is: {result}");
+}
+
+// Apply encapsulation. Separate Calculator logic and behaviour.
+class Calculator
+{
+    public static int Add(int firstNum, int secondNum)
+    {
+        return firstNum + secondNum;
+    }
+
+    public static int Subtract(int firstNum, int secondNum)
+    {
+        return firstNum - secondNum;
+    }
+
+    public static int Multiply(int firstNum, int secondNum)
+    {
+        return firstNum * secondNum;
+    }
+
+    public static int Divide(int firstNum, int secondNum)
+    {
+        return firstNum / secondNum;
+    }
 }
