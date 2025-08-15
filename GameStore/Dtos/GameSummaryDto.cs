@@ -2,9 +2,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace GameStore.Dtos;
 
-public record class UpdateGameDto(
+public record class GameSummaryDto(
+    [Required] int Id,
     [Required][StringLength(50)] string Name,
-    int GenreId,
+    [Required][StringLength(20)] string Genre,
     [Required][Range(1, 100)] decimal Price,
     DateOnly ReleaseDate
 );

@@ -9,21 +9,21 @@ Content-Type: application/json
 
 {
   "name": "Valorant",
-  "genre": "Kids and Family",
-  "price": 123,
+  "genreId": 1,
+  "price": 10.99,
   "releaseDate": "2011-11-18"
 }
 
 ###
-PUT http://localhost:5210/games/2
+PUT http://localhost:5210/games/3
 Content-Type: application/json
 
 {
-  "name": "ValorantValorantValorantValorantValorantValorantValorantValorantValorantValorantValorantValorantValorantValorantValorantValorantValorantValorantValorantValorantValorantValorantValorantValorant",
-  "genre": "First-Person Shooter",
-  "price": 123,
-  "releaseDate": "2021-01-22"
+  "name": "Valheim",
+  "genreId": 2,
+  "price": 35.99,
+  "releaseDate": "2023-05-01"
 }
 
 ###
-DELETE http://localhost:5210/games/2
+DELETE http://localhost:5210/games/4
