@@ -1,0 +1,26 @@
+GET http://localhost:5188/houseplant
+
+###
+GET http://localhost:5188/houseplant/1
+
+###
+POST http://localhost:5188/houseplant
+Content-Type: application/json
+{
+    "name": "Monstera",
+    "leaves": 3,
+    "category": 5
+}
+
+###
+PUT http://localhost:5188/houseplant/1
+{
+    "name": "Rubber Plant",
+    "leaves": 20,
+    "tallness": 8
+}
+
+###
+DELETE http://localhost:5188/houseplant/3
+
+
