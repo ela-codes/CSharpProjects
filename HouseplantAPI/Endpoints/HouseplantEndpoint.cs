@@ -49,6 +49,12 @@ public static class HouseplantEndpoint
             return Results.NoContent();
         });
 
+        group.MapDelete("/{id}", async (int id, HouseplantApiDbContext dbContext) =>
+        {
+            await dbContext.Houseplants.Where(game => game.Id == id).ExecuteDeleteAsync();
+            return Results.NoContent();
+        });
+
         return group;
     }
 }
