@@ -1,23 +1,26 @@
 GET http://localhost:5188/houseplant
 
 ###
-GET http://localhost:5188/houseplant/1
+GET http://localhost:5188/houseplant/5
 
 ###
 POST http://localhost:5188/houseplant
 Content-Type: application/json
+
 {
-    "name": "Monstera",
-    "leaves": 3,
-    "category": 5
+    "name": "String of Pearls",
+    "leaves": 50,
+    "categoryId": 3
 }
 
 ###
-PUT http://localhost:5188/houseplant/1
+PUT http://localhost:5188/houseplant/5
+Content-Type: application/json
+
 {
-    "name": "Rubber Plant",
-    "leaves": 20,
-    "tallness": 8
+    "name": "Jade Plant",
+    "leaves": 41,
+    "categoryId": 3
 }
 
 ###
