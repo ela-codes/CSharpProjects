@@ -18,7 +18,10 @@ public class HouseplantApiDbContext(DbContextOptions<HouseplantApiDbContext> opt
         );
 
         modelBuilder.Entity<Houseplant>().HasData(
-            new { Id = 1, Name = "Monstera", Leaves = 3, CategoryId = 1}
+            new { Id = 1, Name = "Monstera", Leaves = 3, CategoryId = 1},
+            new { Id = 2, Name = "Rubber Tree", Leaves = 20, CategoryId = 1},
+            new { Id = 3, Name = "Haworthia", Leaves = 12, CategoryId = 3},
+            new { Id = 4, Name = "African Violet", Leaves = 19, CategoryId = 2}
         );
     }
 
